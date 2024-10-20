@@ -4,7 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import io
 from PIL import Image
 
-from .app import inference
+from .app import inferance
 
 app = FastAPI()
 
@@ -17,7 +17,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-infr = inference()
+infr = inferance()
 
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
@@ -37,7 +37,7 @@ async def root():
 
 
 ### prod 
-## uvicorn main:app --host 0.0.0.0 --port 4560 --workers 4
+## uvicorn Project_2.main:app --host 0.0.0.0 --port 4560 --workers 4
 
 ### dev
-## uvicorn main:app --host 0.0.0.0 --port 4560 --reload
+## uvicorn Project_2.main:app --host 0.0.0.0 --port 4560 --reload
