@@ -15,7 +15,7 @@ class Spyne:
         Returns:
             PIL.Image: The resulting image with the wall and floor combined.
         """
-        # Create a new image with the same size as the car
+        # Create a new image with the same size as the wall
         result = Image.new('RGBA', wall_img.size, (0, 0, 0, 0))
 
         # Paste the floor starting from the floor_start_height on the wall

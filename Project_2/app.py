@@ -7,7 +7,6 @@ class inferance:
     def __init__(self):
         self.path = os.path.dirname(os.path.abspath(__file__))
         self.classification_model = YOLO(os.path.join(self.path, "models/classifier/best.pt"))
-        self.result = { _class:0 for _class in self.classification_model.names.values() }
 
     def predict(self, image):
         classifer = Classifier(model=self.classification_model)
